@@ -32,3 +32,21 @@ Python => 인터프리터 설치
 pip : 파이썬용 라이브러리 설치 / 관리 도구
 
 openpyxl : excel 읽기 가능한 라이브러리
+requests : 크롤링하기 편한 라이브러리
+       기본 urllib.request 모듈과 같은 역할
+       자동으로 디코딩해줌, json 처리 편함
+       get, post, put, delete 메소드 제공
+       session 적용 가능
+fake-useragent : 브라우저가 크롤링하는것처럼 눈속임하는 라이브러리
+       크롤링 시 봇(bot) 차단을 우회하기 위해 다양한 브라우저의 User-Agent를 무작위로 생성하여 헤더에 적용하는 도구
+
+크롤링(스크랩핑)
+ 웹 자료 수집 
+        => html/css/js => 텍스트/태그
+ robots.txt
+        예. naver
+        User-agent: * : 모든 크롤러
+        Disallow: / : 사이트 전체 크롤링 금지
+        Allow : /$ : /로 끝나는 주소만 허용
+        Allow : /.well-known/privacy-sandbox-attestations.json : 해당 파일 허용
+        

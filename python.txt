@@ -1,3 +1,5 @@
+w3schools => 코딩연습사이트
+
 java => 컴파일러 설치
         JDK 설치
 
@@ -6,7 +8,9 @@ node.js => js 실행 환경 제공
 Python => 인터프리터 설치 
     but, 인터프리터만으로는 개발 불가
     => 데이터 분석 : pandas, matplotlib ...
-    => 크롤링 : ...
+    => 크롤링 : 웹사이트등을 돌아다니며 데이터를 수집하는 행위
+              정적 페이지(동기식 페이지)
+              동적 페이지 => 셀레니움
 
     개발 목적에 따라 환경을 다르게 만듬 => python 인터프리터 + 개발 목적에 맞는 환경 = 가상환경
 
@@ -39,6 +43,7 @@ requests : 크롤링하기 편한 라이브러리
        session 적용 가능
 fake-useragent : 브라우저가 크롤링하는것처럼 눈속임하는 라이브러리
        크롤링 시 봇(bot) 차단을 우회하기 위해 다양한 브라우저의 User-Agent를 무작위로 생성하여 헤더에 적용하는 도구
+BeautifulSoup : 
 
 크롤링(스크랩핑)
  웹 자료 수집 
@@ -49,4 +54,6 @@ fake-useragent : 브라우저가 크롤링하는것처럼 눈속임하는 라이
         Disallow: / : 사이트 전체 크롤링 금지
         Allow : /$ : /로 끝나는 주소만 허용
         Allow : /.well-known/privacy-sandbox-attestations.json : 해당 파일 허용
+
+
         

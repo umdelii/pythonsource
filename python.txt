@@ -48,6 +48,10 @@ pip : 파이썬용 라이브러리 설치 / 관리 도구
        Selenium : 동적 크롤링 라이브러리 (자동 검색 등등)
        pandas : excel + sql의 느낌, 데이터분석 라이브러리
        numpy : 숫자(배열, 행렬) 계산해주는 라이브러리
+       openai : openai
+       python-dotenv : 키값 저장해주는 라이브러리
+       streamlit : LLM 결과, 머신러닝 결과를 화면에 띄워주는 라이브러리
+       gradio : streamlit과 역할 동일
 
 크롤링(스크랩핑)
  웹 자료 수집 
@@ -62,5 +66,69 @@ pip : 파이썬용 라이브러리 설치 / 관리 도구
  Selenium으로 동적 크롤링
 
 
+OpenAI API
+       #### LLM(Large Language Model)
+       - 대규모 텍스트 데이터를 학습한 인공지능 언어 모델
+       - pdf, 문서, 문장 생성 등 가능
+       - OpenAI => GPT
+       - Anthropic => Claude
+       - Google => Gemini
+       - Meta => Liama
+       - Grok
 
-        
+       #### 프롬프트
+       - 모델이 무엇을 해야하는지 설명하는 텍스트 input
+
+       #### 프롬프트 엔지니어링
+       - 모델과 대화를 잘하는 방법
+       - 모델이 최대한 일관되게, 내가 원하는 결과를 도출시키도록 지시문을 설계하는 과정
+       - 같은 프롬프트, 같은 모델, 같은 환경이어도 결과가 100% 동일하지 않을 수 있음
+
+       - reasoning : 모델의 내부 추론 강도 조절(얼마나 오래 생각하고 말할것인가)
+       - low : 빠르게, 직관적으로
+       - medium : 일반적인 설명
+       - high : 복잡한 문제를 깊게 추론
+
+       - instructions : 모델에게 지시하는 최상위 규칙
+
+       - You are a backend API assistant. : 모델 정체성 지정
+       - Answer concisely and accurately. : 짧고, 핵심위주로, 정확하게
+       - If unsure, say you are unsure. : 모르는 부분은 모른다고 말하고
+       - Do not hallucinate APIs or facts. : 환각 현상 줄이기(존재하지 않는 것 만들어내지 말고)
+       - Prefer bullet points over long prose. : 목록형태로
+
+       #### 역할 부여
+       - developer : instruction
+       - user : input 메세지 대상자
+       - assistant : 모델이 생성한 답변 가지고 있는 역할
+
+       #### 파라미터
+       - temperature=1 (기본값)
+       - 기본값보다 높을 시 더 창의적이고 예측하기 어려운 형태로 생성
+       - 기본값보다 낮을수록 일관적이고 논리적인 형태로 생성
+       - 일반적으로는 0.7~1.0 사이 선택
+
+       #### Code generation
+       - 코딩에 최적화된 모델(Codex) 사용
+       - 코딩에 특화된 LLM
+       - gpt-5.1-codex-max
+
+       - 대부분의 gpt 모델 코드작성/리뷰/수정/질의응답 가능은 함
+
+       ### Image
+       #### vision : 모델이 이미지를 입력으로 받아 이해하는 능력
+       - 사진설명, 영수증 분석, 표 읽기, 차트 해석...
+       - 전용모델 : gpt-image-1(이미지 이해, 생성)
+
+       - Response API
+       - Images API
+       - Chat completions API <-- 예전 방식
+
+       #### Audio
+       - 음성 비서
+        - AI 콜센터, 음성 챗봇, 자동차 음성 비서 등
+        - speech-to-speech(Realtime)
+       - Text-to-Speech(텍스트를 사람 목소리로 변환)
+       - Speech-to-Text
+       - Realtime API, Transcription API(audio=>text), Speech API(text=>audio)
+       - Response API는 지원x

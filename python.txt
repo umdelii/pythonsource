@@ -53,6 +53,11 @@ pip : 파이썬용 라이브러리 설치 / 관리 도구
        streamlit : LLM 결과, 머신러닝 결과를 화면에 띄워주는 라이브러리
        gradio : streamlit과 역할 동일
 
+       youtube-transcript-api: youtube 자막 추출
+       langchain : LLM 프레임워크
+       googletrans : google번역
+       pypdf : pdf 문서 읽기
+
 크롤링(스크랩핑)
  웹 자료 수집 
         => html/css/js => 텍스트/태그
